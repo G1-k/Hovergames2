@@ -1,0 +1,10 @@
+<launch>
+
+
+
+    <node pkg="image_transport" type="republish" name="rgb_decompress" args=" compressed in:=/rgb_republish raw out:=/rgb_raw" >
+        <param name="compressed/mode" value="color"/>
+    </node>
+
+   
+</launch>

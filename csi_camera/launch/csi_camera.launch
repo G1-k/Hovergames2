@@ -1,0 +1,7 @@
+<launch>
+
+    <node pkg="csi_camera" name="csi_camera_node" type="csi_camera_node.py" output="screen" />
+
+    <node pkg="image_transport" type="republish" name="rgb_compress" args=" raw in:=/csi_camera/image compressed out:=/rgb_republish"/>
+
+</launch>
